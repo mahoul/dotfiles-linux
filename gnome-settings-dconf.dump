@@ -1,0 +1,208 @@
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+document-font-name='Fira Sans Medium 11'
+font-name='Fira Sans Medium 11'
+gtk-theme='Dracula'
+icon-theme='dracula-icons-circle'
+monospace-font-name='JetBrains Mono Medium 10'
+show-battery-percentage=true
+text-scaling-factor=1.25
+toolkit-accessibility=false
+
+[org/gnome/desktop/wm/keybindings]
+begin-move=@as []
+begin-resize=@as []
+close=['<Super>q']
+cycle-group=@as []
+cycle-group-backward=@as []
+cycle-panels=@as []
+cycle-panels-backward=@as []
+cycle-windows=@as []
+cycle-windows-backward=@as []
+move-to-monitor-down=@as []
+move-to-monitor-left=@as []
+move-to-monitor-right=@as []
+move-to-monitor-up=@as []
+move-to-workspace-1=@as []
+move-to-workspace-down=['<Control><Shift><Alt>Down']
+move-to-workspace-last=@as []
+move-to-workspace-left=@as []
+move-to-workspace-right=@as []
+move-to-workspace-up=['<Control><Shift><Alt>Up']
+switch-applications=['<Super>Tab', '<Alt>Tab']
+switch-applications-backward=['<Shift><Super>Tab', '<Shift><Alt>Tab']
+switch-group=@as []
+switch-group-backward=@as []
+switch-input-source=@as []
+switch-input-source-backward=@as []
+switch-panels=@as []
+switch-panels-backward=@as []
+switch-to-workspace-1=@as []
+switch-to-workspace-last=@as []
+switch-to-workspace-left=['<Alt>Left']
+switch-to-workspace-right=['<Alt>Right']
+toggle-fullscreen=['<Alt>f']
+toggle-maximized=@as []
+
+[org/gnome/desktop/wm/preferences]
+focus-mode='sloppy'
+mouse-button-modifier='<Alt>'
+resize-with-right-button=true
+
+[org/gnome/mutter]
+attach-modal-dialogs=true
+edge-tiling=false
+experimental-features=['scale-monitor-framebuffer']
+workspaces-only-on-primary=true
+
+[org/gnome/mutter/keybindings]
+cancel-input-capture=['<Super><Shift>Escape']
+toggle-tiled-left=@as []
+toggle-tiled-right=@as []
+
+[org/gnome/mutter/wayland/keybindings]
+restore-shortcuts=@as []
+
+[org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
+migrated-gtk-settings=true
+search-filter-time-type='last_modified'
+
+[org/gnome/settings-daemon/plugins/media-keys]
+calculator=@as []
+control-center=['<Super>c']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
+email=@as []
+help=@as []
+home=@as []
+rotate-video-lock-static=['<Super>o', 'XF86RotationLockToggle']
+screensaver=['<Super>Escape']
+www=@as []
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Super>Return'
+command='kitty'
+name='Terminal'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Shift><Super>Return'
+command='flatpak run com.brave.Browser'
+name='Browser'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
+binding='<Shift><Super>n'
+command='nautilus'
+name='Files'
+
+[org/gnome/settings-daemon/plugins/power]
+sleep-inactive-ac-type='nothing'
+sleep-inactive-battery-type='suspend'
+
+[org/gnome/shell]
+app-picker-layout=[{'org.gnome.Contacts.desktop': <{'position': <0>}>, 'org.gnome.Snapshot.desktop': <{'position': <1>}>, 'org.gnome.Weather.desktop': <{'position': <2>}>, 'org.gnome.clocks.desktop': <{'position': <3>}>, 'org.gnome.Maps.desktop': <{'position': <4>}>, 'org.gnome.Extensions.desktop': <{'position': <5>}>, 'org.fedoraproject.MediaWriter.desktop': <{'position': <6>}>, 'org.gnome.Totem.desktop': <{'position': <7>}>, 'org.gnome.Calculator.desktop': <{'position': <8>}>, 'simple-scan.desktop': <{'position': <9>}>, 'org.gnome.Settings.desktop': <{'position': <10>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <11>}>, 'org.codeberg.dnkl.foot.desktop': <{'position': <12>}>, 'org.gnome.Boxes.desktop': <{'position': <13>}>, 'org.gnome.Terminal.desktop': <{'position': <14>}>, 'Utilities': <{'position': <15>}>, 'org.codeberg.dnkl.footclient.desktop': <{'position': <16>}>, 'yelp.desktop': <{'position': <17>}>, 'org.codeberg.dnkl.foot-server.desktop': <{'position': <18>}>, 'libreoffice-calc.desktop': <{'position': <19>}>, 'libreoffice-impress.desktop': <{'position': <20>}>, 'libreoffice-writer.desktop': <{'position': <21>}>}, {'org.remmina.Remmina.desktop': <{'position': <0>}>, 'org.gnome.Rhythmbox3.desktop': <{'position': <1>}>, 'org.gnome.Tour.desktop': <{'position': <2>}>, 'com.brave.Browser.flextop.brave-agimnkijcaahngcdmfeangaknmldooml-Default.desktop': <{'position': <3>}>, 'ca.desrt.dconf-editor.desktop': <{'position': <4>}>, 'org.mozilla.firefox.desktop': <{'position': <5>}>, 'remote-viewer.desktop': <{'position': <6>}>, 'net.minetest.Minetest.desktop': <{'position': <7>}>}]
+disabled-extensions=['tilingshell@ferrarodomenico.com', 'paperwm@paperwm.github.com', 'extensions@abteil.org', 'rectangle@acristoffers.me']
+enabled-extensions=['background-logo@fedorahosted.org', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'pop-shell@system76.com', 'custom-hot-corners-extended@G-dH.github.com', 'dash-to-dock@micxgx.gmail.com', 'BingWallpaper@ineffable-gmail.com']
+favorite-apps=['com.brave.Browser.desktop', 'com.brave.Browser.flextop.brave-agimnkijcaahngcdmfeangaknmldooml-Default.desktop', 'kitty.desktop', 'com.visualstudio.code.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'org.gnome.SystemMonitor.desktop', 'io.github.mimbrero.WhatsAppDesktop.desktop', 'org.telegram.desktop.desktop', 'org.gnome.Extensions.desktop', 'org.gnome.Settings.desktop']
+welcome-dialog-last-shown-version='46.4'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/misc]
+show-osd-monitor-indexes=false
+supported-active-extensions=@as []
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-bottom-left-6]
+ctrl=true
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-bottom-right-6]
+ctrl=true
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-top-left-6]
+ctrl=true
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-top-right-0]
+action='toggle-overview'
+fullscreen=false
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-top-right-6]
+action='disabled'
+ctrl=true
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-1-top-left-6]
+ctrl=true
+
+[org/gnome/shell/extensions/dash-to-dock]
+background-opacity=0.80000000000000004
+dash-max-icon-size=48
+dock-position='BOTTOM'
+height-fraction=0.90000000000000002
+preferred-monitor=-2
+preferred-monitor-by-connector='DP-8'
+shortcut=@as []
+shortcut-text=''
+
+[org/gnome/shell/extensions/pop-shell]
+focus-down=['<Super>Down']
+focus-left=['<Super>Left']
+focus-right=['<Super>Right']
+focus-up=['<Super>Up']
+hint-color-rgba='rgb(121,115,240)'
+management-orientation=@as []
+pop-monitor-down=@as []
+pop-monitor-left=@as []
+pop-monitor-right=@as []
+pop-monitor-up=@as []
+pop-workspace-down=@as []
+pop-workspace-up=@as []
+tile-accept=@as []
+tile-by-default=true
+tile-enter=@as []
+tile-move-down=@as []
+tile-move-down-global=['<Shift><Super>Down']
+tile-move-left=@as []
+tile-move-left-global=['<Shift><Super>Left']
+tile-move-right=@as []
+tile-move-right-global=['<Shift><Super>Right']
+tile-move-up=@as []
+tile-move-up-global=['<Shift><Super>Up']
+tile-reject=@as []
+tile-resize-down=@as []
+tile-resize-left=@as []
+tile-resize-right=@as []
+tile-resize-up=@as []
+tile-swap-down=@as []
+tile-swap-left=@as []
+tile-swap-right=@as []
+tile-swap-up=@as []
+
+[org/gnome/shell/extensions/user-theme]
+name='Dracula'
+
+[org/gnome/shell/keybindings]
+focus-active-notification=['<Super>n']
+shift-overview-down=['<Super><Alt>Down']
+shift-overview-up=['<Super><Alt>Up']
+toggle-application-view=@as []
+toggle-message-tray=['<Super>v', '<Super>m']
+toggle-overview=['<Super>space']
+toggle-quick-settings=@as []
+
+[org/gnome/tweaks]
+show-extensions-notice=false
+
+[org/gtk/gtk4/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+sidebar-width=140
+sort-column='name'
+sort-directories-first=true
+sort-order='ascending'
+type-format='category'
+view-type='list'
+window-size=(1561, 883)
+
+[org/gtk/settings/color-chooser]
+custom-colors=[(0.4751272727272729, 0.45119999999999999, 0.94000000000000006, 1.0), (0.45098039215686275, 0.42352941176470588, 0.98431372549019602, 1.0), (0.44987498355046707, 0.42352941176470582, 0.98431372549019602, 1.0), (0.98431372549019602, 0.72156862745098038, 0.42352941176470588, 1.0)]
+selected-color=(true, 0.4751272727272729, 0.45119999999999999, 0.94000000000000006, 1.0)
+
+[system/locale]
+region='en_IE.UTF-8'
