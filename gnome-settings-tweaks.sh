@@ -8,7 +8,7 @@ curl -L --output /tmp/bingwallpaper.zip https://codeload.github.com/neffo/bing-w
 
 # Install it from tmp
 for ext in user-theme.zip custom_hot_corners_extended.zip dash_to_dock.zip bingwallpaper.zip; do
-	gnome-extension install -f /tmp/$ext
+	gnome-extensions install -f /tmp/$ext
 done
 
 #Add GNOME keyboard shortcuts and User Theme Legacy
