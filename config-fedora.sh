@@ -71,6 +71,6 @@ flatpak install -y \
 	org.videolan.VLC
 	
 
-stow -vvv --adopt -t ~/ term-setup i3
+stow -vvv --adopt -t ~/ bash  gnome-settings  htop  kitty  tmux
 
 bash gnome-settings-tweaks.sh
