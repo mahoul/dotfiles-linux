@@ -61,16 +61,15 @@ flatpak install -y \
 	com.brave.Browser \
 	com.hamrick.VueScan \
 	io.github.mimbrero.WhatsAppDesktop \
-	org.filezillaproject.Filezilla \
 	org.telegram.desktop \
 	com.spotify.Client \
 	org.remmina.Remmina \
-	us.zoom.Zoom \
 	org.flameshot.Flameshot \
 	com.visualstudio.code \
-	org.videolan.VLC
 	
+cd stow
+stow -vvv --adopt -t ~/ bash gnome-settings htop kitty tmux
+cd -
 
-#stow -vvv --adopt -t ~/ bash  gnome-settings  htop  kitty  tmux
+bash gnome-settings-tweaks.sh
 
-#bash gnome-settings-tweaks.sh
