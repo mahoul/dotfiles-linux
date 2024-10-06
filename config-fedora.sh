@@ -87,7 +87,7 @@ if `lshw -short -c processor 2>&1 | grep -q "Radeon.*Graphics"`; then
 fi
 
 # Change my shell
-if ! `sudo chmod -s $(which zsh) $USER`; then
+if ! `sudo chsh -s $(which zsh) $USER`; then
 	sudo sss_override user-add $USER -s $(which zsh)
 fi
 
@@ -103,14 +103,17 @@ flatpak install -y \
 	org.remmina.Remmina
 	
 cd stow
-stow -vvv --adopt -t ~/ bash gnome-settings htop kitty tmux vim zsh
+stow -vvv --adopt -t ~/ bash gnome-settings htop kitty tmux vim
 cd -
 
 # Setting there Dracula theme and fonts
 bash gnome-settings-tweaks.sh
 
 # Enable Oh my ZSH!
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh; exit)"
 
-## Setup fzf to deploy fzf search history
-#echo "source <(fzf --zsh)"
+## Setup zsh stow
+rm -f ~/.zshrc
+cd stow
+stow -vvv --adopt -t ~/ zsh
+cd -
