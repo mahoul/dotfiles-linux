@@ -103,7 +103,7 @@ flatpak install -y \
 	org.remmina.Remmina
 	
 cd stow
-stow -vvv --adopt -t ~/ bash gnome-settings htop kitty tmux vim
+stow -vvv --adopt -t ~/ bash gnome-settings htop kitty tmux vim vscode
 cd -
 
 # Setting there Dracula theme and fonts
