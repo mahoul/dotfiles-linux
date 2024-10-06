@@ -36,6 +36,7 @@ get_required_packages(){
 	powerline
 	powerline-fonts
 	virt-viewer
+	sssd-tools
 	stow
 	tmux
 	tmux-powerline
