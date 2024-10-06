@@ -47,6 +47,7 @@ get_required_packages(){
 	xdotool
 	xprop
 	xrandr
+	zsh
 	EOF
 }
 
@@ -89,7 +90,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 # Change my shell
 if ! `sudo chmod -s $(which zsh) $USER`; then
-	sss_override user-add $USER -s $(which zsh)
+	sudo sss_override user-add $USER -s $(which zsh)
 fi
 
 # Enable flatpaks and install them
