@@ -84,6 +84,9 @@ if `lshw -short -c processor 2>&1 | grep -q "Radeon.*Graphics"`; then
     sudo dnf swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
 fi
 
+# Enable Oh my ZSH!
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 # Enable flatpaks and install them
 #
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
