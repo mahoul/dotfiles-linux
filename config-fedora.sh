@@ -18,6 +18,7 @@ get_required_packages(){
 	exa
 	feh
 	fontawesome-fonts
+	fzf
 	git
 	gnome-shell-extension-pop-shell
 	gnome-tweaks
