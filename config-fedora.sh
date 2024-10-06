@@ -86,9 +86,6 @@ if `lshw -short -c processor 2>&1 | grep -q "Radeon.*Graphics"`; then
     sudo dnf swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
 fi
 
-# Enable Oh my ZSH!
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 # Change my shell
 if ! `sudo chmod -s $(which zsh) $USER`; then
 	sudo sss_override user-add $USER -s $(which zsh)
@@ -109,5 +106,8 @@ cd stow
 stow -vvv --adopt -t ~/ bash gnome-settings htop kitty tmux vim zsh
 cd -
 
+# Setting there Dracula theme and fonts
 bash gnome-settings-tweaks.sh
 
+# Enable Oh my ZSH!
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
