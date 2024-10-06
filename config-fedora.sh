@@ -87,6 +87,11 @@ fi
 # Enable Oh my ZSH!
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+# Change my shell
+if ! `sudo chmod -s $(which zsh) $USER`; then
+	sss_override user-add $USER -s $(which zsh)
+fi
+
 # Enable flatpaks and install them
 #
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -99,7 +104,7 @@ flatpak install -y \
 	org.remmina.Remmina
 	
 cd stow
-stow -vvv --adopt -t ~/ bash gnome-settings htop kitty tmux vim
+stow -vvv --adopt -t ~/ bash gnome-settings htop kitty tmux vim zsh
 cd -
 
 bash gnome-settings-tweaks.sh
