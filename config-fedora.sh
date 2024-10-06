@@ -23,7 +23,7 @@ get_required_packages(){
 	gnome-tweaks
 	htop
 	lshw
-	koji
+	kodi
 	kitty
 	kitty-doc
 	jetbrains-mono-fonts
