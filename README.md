@@ -7,6 +7,8 @@ Mahoul's dotfiles for Linux
 
 With a clean keystrokes. Remeber this:
 
+| Keystroke |  Action |
+|-----------|-------|
 | Win + Space |  Launcher |
 | Win + Left/Right | Move to window left/right |
 
@@ -26,7 +28,7 @@ With a clean keystrokes. Remeber this:
 - Dracula - https://draculatheme.com
 
 # Thanks to
-https://linuxcapable.com/how-to-install-kodi-on-fedora-linux/
-https://github.com/devangshekhawat/Fedora-40-Post-Install-Guide
-https://draculatheme.com/vim
-https://draculatheme.com/kitty
+- https://linuxcapable.com/how-to-install-kodi-on-fedora-linux/
+- https://github.com/devangshekhawat/Fedora-40-Post-Install-Guide
+- https://draculatheme.com/vim
+- https://draculatheme.com/kitty
