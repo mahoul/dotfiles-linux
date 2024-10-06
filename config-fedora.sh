@@ -1,5 +1,14 @@
 #!/bin/bash
 
+add_rpm_fusion_repos(){
+	sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+}
+
+download_latest_vscode(){
+	curl -L 'https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64' -o /tmp/vscode-x86_64.rpm 
+}
+
 get_required_packages(){
 	cat <<-EOF
 	bat
@@ -13,6 +22,8 @@ get_required_packages(){
 	gnome-shell-extension-pop-shell
 	gnome-tweaks
 	htop
+	lshw
+	koji
 	kitty
 	kitty-doc
 	jetbrains-mono-fonts
@@ -47,11 +58,29 @@ missing_pkgs(){
 
 [ -d $HOME/bin ] && export PATH=$HOME/bin:$PATH
 
+# Add RPM fusion repos
+add_rpm_fusion_repos
+download_latest_vscode
+
 # Check if all required packages are installed and 
 # launch installation if any of them is missing.
 #
 if ! missing_pkgs; then
 	get_required_packages | xargs sudo yum install -y
+fi
+
+# Install remote vscode
+sudo yum install -y /tmp/vscode-x86_64.rpm
+
+# Enable CODECS
+sudo dnf swap -y 'ffmpeg-free' 'ffmpeg' --allowerasing # Switch to full FFMPEG.
+sudo dnf group install -y Multimedia
+sudo dnf update -y @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin # Installs gstreamer components. Required if you use Gnome Videos and other dependent applications.
+
+# Enable AMD codecs
+if `lshw -short -c processor 2>&1 | grep -q "Radeon.*Graphics"`; then
+	sudo dnf swap -y mesa-va-drivers mesa-va-drivers-freeworld
+    sudo dnf swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
 fi
 
 # Enable flatpaks and install them
@@ -63,12 +92,10 @@ flatpak install -y \
 	io.github.mimbrero.WhatsAppDesktop \
 	org.telegram.desktop \
 	com.spotify.Client \
-	org.remmina.Remmina \
-	org.flameshot.Flameshot \
-	com.visualstudio.code \
+	org.remmina.Remmina
 	
 cd stow
-stow -vvv --adopt -t ~/ bash gnome-settings htop kitty tmux
+stow -vvv --adopt -t ~/ bash gnome-settings htop kitty tmux vim
 cd -
 
 bash gnome-settings-tweaks.sh
